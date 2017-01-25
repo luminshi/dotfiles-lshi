@@ -1,0 +1,13 @@
+# Disable the startup message
+startup_message off
+
+# Set a large scrollback buffer
+defscrollback 32000
+
+# Always start `screen` with UTF-8 enabled (`screen -U`)
+defutf8 on
+
+# Display a caption string below, appearing like tabs and
+# displaying the window number and application name (by default).
+caption always
+caption string "%{kw}%-w%{wr}%n %t%{-}%+w"
