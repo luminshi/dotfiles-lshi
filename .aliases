@@ -83,3 +83,7 @@ alias stfu="osascript -e 'set volume output muted true'"
 alias pumpitup="osascript -e 'set volume 7'"
 #rsync
 alias rsync='rsync -h -v -r -P -t'
+
+#svn set file as binary
+alias svn-set-bin='svn propset svn:mime-type application/octet-stream'
+alias svn-current-folder-ignore='svn propedit svn:ignore .'
