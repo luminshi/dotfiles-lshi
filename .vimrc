@@ -1,5 +1,3 @@
-set background=dark
-
 " Make Vim more useful
 set nocompatible
 filetype plugin on
@@ -32,9 +30,16 @@ set showmode
 set title
 " Show the (partial) command as it’s being typed
 set showcmd
+set t_Co=256
 
-" Toggle spell checking on and off with `,s`
-let mapleader = "," 
-nmap <silent> <leader>s :set spell!<CR>
 " Set region to US English
 set spelllang=en_us
+
+set clipboard=unnamed
+set mouse=a
+"
+" vim-airline
+set laststatus=2
+
+colorscheme molokai
+set backspace=2
