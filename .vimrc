@@ -26,8 +26,6 @@ set noerrorbells
 set ruler
 " Show the current mode
 set showmode
-" Show the filename in the window titlebar
-set title
 " Show the (partial) command as it’s being typed
 set showcmd
 set t_Co=256
