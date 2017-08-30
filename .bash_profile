@@ -40,7 +40,7 @@ fi;
 
 
 function _update_ps1() {
-    PS1="$(~/.powerline-shell.py --cwd-max-depth 3 $? 2> /dev/null)"
+    PS1="$(~/.powerline-shell.py --cwd-max-depth --mode flat --colorize-hostname 3 $? 2> /dev/null)"
 }
 
 if [ "$TERM" != "linux" ]; then
