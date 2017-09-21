@@ -37,7 +37,7 @@ fi;
 
 # Add powerline shell prompt
 function _update_ps1() {
-    PS1="$(~/.powerline-shell.exe --cwd-max-depth 3 --mode flat $? 2> /dev/null)"
+    PS1="$(~/.powerline-shell.py --cwd-max-depth 3 --mode flat $? 2> /dev/null)"
 }
 
 if [ "$TERM" != "linux" ]; then
