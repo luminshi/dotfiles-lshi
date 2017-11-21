@@ -30,6 +30,7 @@ set showmode
 set showcmd
 set t_Co=256
 
+color dracula
 " Set region to US English
 set spelllang=en_us
 
