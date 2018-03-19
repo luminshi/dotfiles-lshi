@@ -35,7 +35,7 @@ set backspace=2
 call plug#begin('~/.vim/plugged')
 
 " Declare the list of plugins.
-Plug 'junegunn/seoul256.vim'
+Plug 'flazz/vim-colorschemes'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
@@ -44,8 +44,7 @@ Plug 'Valloric/YouCompleteMe'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
-let g:seoul256_background = 236
-colo seoul256
+colo mustang
 let g:airline_theme='soda'
 let g:airline#extensions#tabline#enabled = 1
 
