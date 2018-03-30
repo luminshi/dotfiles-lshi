@@ -31,21 +31,23 @@ set t_Co=256
 " make backspace work like most other programs
 set backspace=2 
 
+
 " Plugins will be downloaded under the specified directory.
 call plug#begin('~/.vim/plugged')
 
 " Declare the list of plugins.
-Plug 'junegunn/seoul256.vim'
+Plug 'flazz/vim-colorschemes'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
 Plug 'Valloric/YouCompleteMe'
+Plug 'scrooloose/nerdtree'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
-let g:seoul256_background = 236
-colo seoul256
-let g:airline_theme='soda'
+map <C-n> :NERDTreeToggle<CR>
+colo gruvbox
+set background=light
+let g:airline_theme='simple'
 let g:airline#extensions#tabline#enabled = 1
 
