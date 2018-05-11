@@ -1,2 +1,2 @@
-# Add `~/Bin` to the `$PATH`
 export PATH="$HOME/Bin:$PATH";
+export PATH="$HOME/.local/bin:$PATH";
