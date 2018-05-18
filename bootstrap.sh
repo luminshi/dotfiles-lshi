@@ -16,6 +16,8 @@ function doIt() {
 	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
 		--exclude "README.md" --exclude "LICENSE" -avh --no-perms . ~;
 	source ~/.bash_profile;
+    chmod +x ~/.powerline-go-darwin-amd64
+    chmod +x ~/.powerline-go-linux-amd64
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
