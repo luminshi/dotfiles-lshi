@@ -29,12 +29,22 @@ fi;
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2- | tr ' ' '\n')" scp sftp ssh;
 
+# Add powerline shell prompt, if OS is linux or macos
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+    function _update_ps1() {
+        PS1="$(~/.powerline-go-linux-amd64 -mode flat -cwd-max-dir-size 20 -modules "venv,user,ssh,cwd,perms,git,hg,jobs,exit,root" -error $?)"
+    }
 
-# Add powerline shell prompt
-function _update_ps1() {
-    PS1="$(~/.powerline-shell.py --cwd-max-depth 3 --mode flat $? 2> /dev/null)"
-}
+    if [ "$TERM" != "linux" ]; then
+        PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+    fi
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    function _update_ps1() {
+        PS1="$(~/.powerline-go-darwin-amd64 -mode flat -cwd-max-dir-size 20 -modules "venv,user,ssh,cwd,perms,git,hg,jobs,exit,root" -error $?)"
+    }
 
-if [ "$TERM" != "linux" ]; then
-    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+    if [ "$TERM" != "linux" ]; then
+        PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+    fi
 fi
+
