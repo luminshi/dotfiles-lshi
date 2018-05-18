@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+if ! hash curl 2>/dev/null; then
+    echo "Please install curl first."
+    return 1
+fi
 
 # install vim plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
