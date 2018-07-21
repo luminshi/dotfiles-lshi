@@ -32,7 +32,7 @@ fi;
 # Add powerline shell prompt, if OS is linux or macos
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     function _update_ps1() {
-        PS1="$(~/.powerline-go-linux-amd64 -mode flat -cwd-max-dir-size 20 -newline -modules "venv,user,ssh,cwd,perms,git,hg,jobs,exit,root" -error $?)"
+        PS1="$(~/.powerline-go-linux-amd64 -mode flat -cwd-max-dir-size 20 -newline -error $?)"
     }
 
     if [ "$TERM" != "linux" ]; then
@@ -40,7 +40,7 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
     fi
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     function _update_ps1() {
-        PS1="$(~/.powerline-go-darwin-amd64 -mode flat -cwd-max-dir-size 20 -newline -modules "venv,user,ssh,cwd,perms,git,hg,jobs,exit,root" -error $?)"
+        PS1="$(~/.powerline-go-darwin-amd64 -mode flat -cwd-max-dir-size 20 -newline -error $?)"
     }
 
     if [ "$TERM" != "linux" ]; then
