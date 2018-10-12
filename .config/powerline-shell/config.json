@@ -8,7 +8,12 @@
     "git",
     "hg",
     "jobs",
-    "root"
+    "root",
+    "newline"
   ],
-  "mode": "compatible"
+  "cwd": {
+      "max_depth": 4,
+      "max_dir_size": 5
+  },
+  "mode": "flat"
 }
