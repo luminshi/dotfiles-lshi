@@ -29,4 +29,4 @@ else
 fi;
 unset doIt;
 
-echo "Remember to install powerline-shell from pip :)"
+echo "Remember to install powerline-shell from pip if you are using bash"
