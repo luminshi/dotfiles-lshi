@@ -34,14 +34,11 @@ set backspace=2
 
 " Plugins will be downloaded under the specified directory.
 call plug#begin('~/.vim/plugged')
-
 " Declare the list of plugins.
 Plug 'flazz/vim-colorschemes'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'Valloric/YouCompleteMe'
 Plug 'scrooloose/nerdtree'
-
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
