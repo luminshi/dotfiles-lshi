@@ -1,8 +1,2 @@
 export PATH="$HOME/Bin:$PATH";
 export PATH="$HOME/.local/bin:$PATH";
-
-# include ruby user lib binaries if ruby exists
-if [ -x "$(command -v ruby)" ]; then
-    export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH";
-fi
-
