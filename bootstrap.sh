@@ -1,9 +1,17 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 if ! hash curl 2>/dev/null; then
-    echo "Please install curl first."
-    return 1
+    echo "Please install curl."
+    exit 1
 fi
+
+if ! hash zsh 2>/dev/null; then
+    echo "Please install zsh."
+    exit 1
+fi
+
+# install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # install vim plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
