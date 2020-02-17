@@ -48,3 +48,6 @@ set background=light
 let g:airline_theme='simple'
 let g:airline#extensions#tabline#enabled = 1
 
+" use tab and shift+tab to switch to next and previous buffer
+nnoremap  <silent>   <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
+nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
