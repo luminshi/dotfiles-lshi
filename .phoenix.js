@@ -323,3 +323,42 @@ var move_right_bottom_third = Key.on('g', [ 'ctrl', 'shift' ], function () {
         height: screen.height / 2
     });
 });
+
+
+// 2/3 WIDTH SPLIT
+
+var move_left_two_third = Key.on('v', [ 'ctrl', 'shift' ], function () {
+    var screen = Screen.main().flippedVisibleFrame();
+    var window = Window.focused();
+    if (window === undefined) {
+        return;
+    }
+    if (window.isFullScreen() || window.isMinimized()) return;
+    
+    window.setTopLeft({
+        x: screen.x,
+        y: screen.y
+    });
+    window.setSize({
+        width: screen.width / 3 * 2,
+        height: screen.height
+    });
+});
+
+var move_right_two_third = Key.on('b', [ 'ctrl', 'shift' ], function () {
+    var screen = Screen.main().flippedVisibleFrame();
+    var window = Window.focused();
+    if (window === undefined) {
+        return;
+    }
+    if (window.isFullScreen() || window.isMinimized()) return;
+    
+    window.setTopLeft({
+        x: screen.x + (screen.width / 3),
+        y: screen.y
+    });
+    window.setSize({
+        width: screen.width / 3 * 2,
+        height: screen.height
+    });
+});
