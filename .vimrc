@@ -28,6 +28,7 @@ call plug#end()
 map <C-n> :NERDTreeToggle<CR>
 
 colo gruvbox
+set bg=dark
 let g:airline_theme='base16_gruvbox_dark_hard'
 
 " use tab and shift+tab to switch to next and previous buffer
