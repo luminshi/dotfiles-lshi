@@ -37,7 +37,7 @@ export EDITOR='vim'
 # check weather
 alias weather='curl wttr.in/eugene_or\?0'
 # mpv youtube-dl download best possible
-alias mpv-best='mpv --ytdl-format=bestvideo+bestaudio/best'
+alias mpv-4k='mpv --ytdl-format="bestvideo[height<=?2160]+bestaudio/best"'
 # mpv youtube-dl download 1440 max
-alias mpv-ok='mpv --ytdl-format=bestvideo[height<=?1440]+bestaudio/best'
+alias mpv-2k='mpv --ytdl-format="bestvideo[height<=?1440]+bestaudio/best"'
 
