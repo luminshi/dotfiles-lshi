@@ -1,3 +1,6 @@
+[miscellany]
+enable-auto-props = yes
+
 [auto-props]
 
 # Image formats
@@ -46,3 +49,5 @@
 *.xul        = svn:eol-style=native; svn:keywords=Id; svn:mime-type=text/xul
 *.yaml       = svn:eol-style=native; svn:keywords=Id; svn:mime-type=text/plain
 
+# Others
+*.drawio     = svn:eol-style=native; svn:keywords=Id; svn:mime-type=text/xml
