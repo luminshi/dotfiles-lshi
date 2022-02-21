@@ -22,7 +22,7 @@ then
 else
     echo "Install oh-my-zsh first.  Aborting.";
     echo ""
-    echo 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"';
+    echo 'sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"';
     echo "";
     exit 1;
 fi
