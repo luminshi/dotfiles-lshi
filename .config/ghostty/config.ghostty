@@ -1,0 +1,16 @@
+# Fixed light Gruvbox theme (single theme = no light/dark auto-switching)
+theme = Gruvbox Light
+
+# Flashing block cursor
+cursor-style = block
+cursor-style-blink = true
+
+# Monospaced font (Roboto Mono; emoji falls back to Noto automatically)
+font-family = Roboto Mono
+
+# Keep the block cursor at the shell prompt (shell integration otherwise sets a bar)
+shell-integration-features = no-cursor
+
+# Default window size (columns x rows)
+window-width = 160
+window-height = 42

@@ -46,10 +46,23 @@ if [ ! -f .vimrc ]; then
     exit 1
 fi
 
+excludes=(
+    --exclude ".git/"
+    --exclude ".DS_Store"
+    --exclude "bootstrap.sh"
+    --exclude "README.md"
+    --exclude "LICENSE"
+)
+
+# Ghostty is configured for Linux only. macOS keeps its config in
+# "~/Library/Application Support/com.mitchellh.ghostty", not "~/.config/ghostty".
+if [ "$(uname -s)" != "Linux" ]; then
+    excludes+=(--exclude ".config/ghostty/")
+fi
+
 # function to copy my dotfiles
 doIt() {
-    rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
-        --exclude "README.md" --exclude "LICENSE" -avh --no-perms "$@" . "$HOME"
+    rsync "${excludes[@]}" -avh --no-perms "$@" . "$HOME"
 }
 
 case "${1:-}" in

@@ -23,3 +23,7 @@ Mostly configured for macOS. The platform-specific bits fall back gracefully on
 Linux: `.latexmkrc` previews with Skim on macOS and `xdg-open` elsewhere,
 `.zshrc` only adds the MacTeX `PATH` when it exists, and `.phoenix.js` is simply
 unused outside macOS.
+
+`.config/ghostty` is the one Linux-only entry: it is skipped on other platforms,
+since macOS keeps Ghostty's config in
+`~/Library/Application Support/com.mitchellh.ghostty`.
