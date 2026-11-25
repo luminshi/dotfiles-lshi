@@ -1,3 +1,4 @@
+set nocompatible
 filetype plugin on
 set number
 syntax on
@@ -25,11 +26,12 @@ call plug#end()
 
 map <C-n> :NERDTreeToggle<CR>
 
+" gruvbox picks its palette from 'background' when it loads, so set it first
+set background=light
 colo gruvbox
-set bg=dark
 
 " airline configs
-let g:airline_theme='base16_gruvbox_dark_hard'
+let g:airline_theme='base16_gruvbox_light_hard'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'

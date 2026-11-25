@@ -1,6 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/Bin:$HOME/bin:/usr/local/sbin:$PATH
-export PATH=/Library/TeX/texbin:$PATH
+# TeX from MacTeX only exists on macOS
+if [ -d /Library/TeX/texbin ]; then
+    export PATH=/Library/TeX/texbin:$PATH
+fi
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
